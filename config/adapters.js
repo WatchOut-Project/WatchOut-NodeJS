@@ -42,10 +42,10 @@ module.exports.adapters = {
   mongo: {
     module   : 'sails-mongo',
     host     : 'localhost',
-    port     : 27017,
-    user     : 'username',
-    password : 'password',
-    database : 'your mongo db name here'
+    port     : 39768,
+    user     : 'heroku_app17543428',
+    password : 'dsa372je382k8sgqa4hadm2g6g',
+    database : 'heroku_app17543428'
   }
 
 };
