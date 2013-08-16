@@ -1,0 +1,2 @@
+# WatchOut
+### a Sails application
