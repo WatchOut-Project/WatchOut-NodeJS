@@ -39,9 +39,10 @@ module.exports.adapters = {
     database: 'YOUR_MYSQL_DB'
   },
 
+  // heroku_app17543428:dsa372je382k8sgqa4hadm2g6g@ds039768.mongolab.com:39768/heroku_app17543428
   mongo: {
     module   : 'sails-mongo',
-    host     : 'localhost',
+    host     : 'ds039768.mongolab.com',
     port     : 39768,
     user     : 'heroku_app17543428',
     password : 'dsa372je382k8sgqa4hadm2g6g',
