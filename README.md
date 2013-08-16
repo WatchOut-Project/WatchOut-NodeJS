@@ -1,2 +1,2 @@
 # WatchOut
-### a Sails application
+### Watch Out Web Application
