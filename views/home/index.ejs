@@ -8,9 +8,11 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     <script>
         var map;
+
         function initialize() {
             var mapOptions = {
                 zoom: 16,
+                minZoom: 2,
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
                 zoomControl: true,
                 zoomControlOptions: {
@@ -19,8 +21,9 @@
                 },
                 mapTypeControl: false,
                 panControl: false,
-                scaleControl: false,
+                scaleControl: true,
                 streetViewControl: false,
+                overviewMapControl: false
             };
             map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     
@@ -30,10 +33,18 @@
                 map.setCenter(new google.maps.LatLng(-34.397, 150.644));
             }
         }
+
+        // var myloc = new google.maps.Marker({
+        //     clickable: false,
+        //     shadow: null,
+        //     animation: google.maps.Animation.DROP,
+        //     map:map
+        // });
         
         function showPosition(position) {
             var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-            map.setCenter(geolocate);  
+            map.setCenter(geolocate);
+            // myloc.setPosition(geolocate);
         }
         
         function showError(error) {
