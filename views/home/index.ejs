@@ -8,6 +8,9 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
     <script>
         var map;
+        var myloc;
+        var maxZoomLevel = 30;
+        var maxZoomService = new google.maps.MaxZoomService();
 
         function initialize() {
             var mapOptions = {
@@ -26,25 +29,28 @@
                 overviewMapControl: false
             };
             map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+            myloc = new google.maps.Marker({
+                clickable: false,
+                shadow: null,
+                icon: "http://i.stack.imgur.com/orZ4x.png",
+                map:map
+            });
     
             if(!!navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition, showError);
             } else {
                 map.setCenter(new google.maps.LatLng(-34.397, 150.644));
             }
-        }
 
-        // var myloc = new google.maps.Marker({
-        //     clickable: false,
-        //     shadow: null,
-        //     animation: google.maps.Animation.DROP,
-        //     map:map
-        // });
+            google.maps.event.addListener(map, 'center_changed', centerChanged);
+            google.maps.event.addListener(map, 'zoom_changed', zoomChanged);
+        }
         
         function showPosition(position) {
             var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
             map.setCenter(geolocate);
-            // myloc.setPosition(geolocate);
+            myloc.setPosition(geolocate);
         }
         
         function showError(error) {
@@ -59,6 +65,19 @@
                   break;
             }
             map.setCenter(new google.maps.LatLng(-34.397, 150.644));
+        }
+
+        function centerChanged() {
+            maxZoomService.getMaxZoomAtLatLng(map.getCenter(), function(MaxZoomResult) {
+                if (MaxZoomResult.status == google.maps.MaxZoomStatus.OK) {
+                    maxZoomLevel = MaxZoomResult.zoom;
+                }
+            });
+        }
+
+        function zoomChanged() {
+            if (map.getZoom() > maxZoomLevel) 
+                map.setZoom(maxZoomLevel);
         }
 
         google.maps.event.addDomListener(window, 'load', initialize);

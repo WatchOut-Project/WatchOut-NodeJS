@@ -2,7 +2,7 @@
     "name": "WatchOut",
     "private": true,
     "version": "0.0.1",
-    "description": "a Sails application",
+    "description": "WatchOut Web Application",
     "dependencies": {
         "sails": "0.9.3",
         "grunt": "0.4.1",
