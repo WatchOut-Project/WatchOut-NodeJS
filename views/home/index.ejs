@@ -1,8 +1,36 @@
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
+
+    <script>
+        $(function() {
+                var body = $(this).find("body");
+                var nav = $(this).find("#nav");
+                var login = $(this).find("#login-canvas");
+                var map = $(this).find("#map-canvas");
+                map.css("height", body.height() - nav.height() - login.height());
+        });
+    </script>
+
     <style>
-      html, body, #map-canvas {
+      html, body {
         margin: 0;
         padding: 0;
         height: 100%;
+      }
+      #nav {
+        margin: 0;
+        padding: 0;
+        height: 55px;
+        background: #e8a228;
+      }
+      #login-canvas {
+        margin: 0;
+        padding: 0;
+        height: 650px;
+        background: #fbfbfb;
+      }
+      #map-canvas {
+        margin: 0;
+        padding: 0;
       }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
@@ -82,4 +110,6 @@
 
         google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <div id="nav"></div>
+    <div id="login-canvas"></div>
     <div id="map-canvas"></div>

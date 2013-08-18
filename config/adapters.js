@@ -16,7 +16,7 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified
   // in a model definition, 'default' will be used./23
-  'default': 'mongo',
+  'default': 'disk',
 
   // In-memory adapter for DEVELOPMENT ONLY
   memory: {
