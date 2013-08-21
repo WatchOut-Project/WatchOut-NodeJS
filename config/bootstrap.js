@@ -15,4 +15,5 @@ module.exports.bootstrap = function (cb) {
   cb();
 
   sails.config.appName = "Watch Out";
+
 };
