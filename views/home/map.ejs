@@ -1,14 +1,11 @@
-
-<div id="nav"></div>
-<div id="map-canvas"></div>
-
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script>
     $(function () {
         var body = $(this).find("body");
         var nav = $(this).find("#nav");
+        var login = $(this).find("#login-canvas");
         var map = $(this).find("#map-canvas");
-        map.css("height", body.height() - nav.height());
+        map.css("height", body.height() - nav.height() - login.height());
     });
 </script>
 <style>
@@ -24,9 +21,32 @@
         margin: 0px;
         padding: 0px;
     }
+    #login-canvas {
+        background: #fbfbfb;
+        height: 600px;
+        margin: 0px;
+        padding: 0px;
+    }
     #map-canvas {
         margin: 0px;
         padding: 0px;
+    }
+    #title {
+        color: #e8a228;
+        font-family: "Verdana";
+        font-size: 45px;
+        font-weight: bold;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+    #title-sub {
+        color: #63450b;
+        font-family: "Courier New";
+        font-size: 40px;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
     }
 </style>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
@@ -106,3 +126,10 @@
 
     google.maps.event.addDomListener(window, 'load', initialize);
 </script>
+<div id="nav"></div>
+<div id="login-canvas">
+    <div></div>
+    <h1 id="title">Watch Out</h1>
+    <h2 id="title-sub">스마트 안전지도 소셜 네트워크 서비스</h2>
+</div>
+<div id="map-canvas"></div>

@@ -12,7 +12,9 @@ module.exports = {
 
     username: {
         type: 'string',
-        required: true
+        required: true,
+        maxLength: 20,
+        minLength: 5
     },
 
     emailAddress: {
