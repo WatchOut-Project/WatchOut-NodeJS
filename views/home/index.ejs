@@ -1,30 +1,44 @@
-
-<div id="nav"></div>
 <div id="map-canvas"></div>
+<div id="nav"></div>
 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script>
-    $(function () {
-        var body = $(this).find("body");
-        var nav = $(this).find("#nav");
-        var map = $(this).find("#map-canvas");
-        map.css("height", body.height() - nav.height());
-    });
+    // $(function () {
+    //     var body = $(this).find("body");
+    //     var nav = $(this).find("#nav");
+    //     var map = $(this).find("#map-canvas");
+    //     map.css("height", body.height() - nav.height());
+    // });
 </script>
 <style>
     html,
     body {
         height: 100%;
+        width: 100%;
         margin: 0px;
         padding: 0px;
     }
     #nav {
-        background: #e8a228;
+        background: #ffffff;
         height: 40px;
+        width: 100%;
         margin: 0px;
         padding: 0px;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        opacity: 0.4;
+        z-index: 1;
     }
     #map-canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        height: 100%;
+        width: 100%;
         margin: 0px;
         padding: 0px;
     }
