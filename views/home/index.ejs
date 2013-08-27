@@ -1,21 +1,24 @@
-<div id="nav" class="blur"></div>
-<div id="title_div">
+<div id="nav" class="blur">
     <h1 id="title">WatchOut</h1>
+    <ul id="sign">
+        <li id="sign-in">Sign in</li>
+        <li id="sign-up">Sign up</li>
+    </ul>
 </div>
 <div id="map-canvas"></div>
 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script>
-    // $(function () {
-    //     var body = $(this).find("body");
-    //     var nav = $(this).find("#nav");
-    //     var map = $(this).find("#map-canvas");
-    //     map.css("height", body.height() - nav.height());
-    // });
+    $(function () {
+        var body = $(this).find("body");
+        var nav = $(this).find("#nav");
+        var map = $(this).find("#map-canvas");
+        map.css("height", body.height() - nav.height());
+    });
 </script>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script>
-<script type='text/javascript' src='/js/blur.js'></script>
+<script type='text/javascript' src='/linker/js/blur.js'></script>
 <script type="text/javascript">
     $(document).ready(function(){
         $('.blur').blurjs({
@@ -33,40 +36,53 @@
         padding: 0px;
     }
     #nav {
-        position: absolute;
-        background: #000000;
-        opacity: 0.7;
-        height: 40px;
+        background: #1a1a1a;
+        opacity: 0.8;
+        height: 44px;
         width: 100%;
         margin: 0px;
         padding: 0px;
         z-index: 1;
     }
-    #title_div {
-        position: absolute;
-        height: 40px;
-        width: 100%;
-        margin: 0px;
-        padding: 0px;
-        z-index: 2;
-    }
     #title {
-        color: #e8a228;
+        color: #f6ad18;
         text-align: center;
-        margin-left: auto;
-        margin-right: auto;
+        margin-top: 12px
         opacity: 1;
         padding: 0;
         margin: 0;
         font-style: bold;
         font-family:"Verdana", sans-serif;
+        z-index: 2;
+        font-size: 30px;
+    }
+    #sign {
+        position: relative;
+    }
+    #sign-in {
+        color: #ffffff;
+        text-align: right;
+        opacity: 1;
+        padding: 0;
+        margin: 50px;
+        font-style: bold;
+        font-family:"Verdana", sans-serif;
+        z-index: 2;
+    }
+    #sign-up {
+        color: #ffffff;
+        text-align: right;
+        opacity: 1;
+        padding: 0;
+        margin: 0;
+        font-style: bold;
+        font-family:"Verdana", sans-serif;
+        z-index: 2;
     }
     #map-canvas {
-        position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
-        height: 100%;
         width: 100%;
         margin: 0px;
         padding: 0px;

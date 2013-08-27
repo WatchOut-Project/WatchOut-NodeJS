@@ -16,7 +16,7 @@
 
 module.exports = function (grunt) {
 
-
+  'use strict';
 
   /**
    * CSS files to inject in order
@@ -42,6 +42,11 @@ module.exports = function (grunt) {
    */
 
   var jsFilesToInject = [
+
+    // Need this order for these libraries to work correctly
+    'linker/js/vendor/jquery.js',
+    'linker/js/vendor/underscore.js',
+    'linker/js/vendor/backbone.js',
 
     // Below, as a demonstration, you'll see the built-in dependencies
     // linked in the proper order order
