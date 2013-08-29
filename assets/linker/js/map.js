@@ -78,3 +78,14 @@ function zoomChanged() {
         map.setZoom(maxZoomLevel);
     }
 }
+
+function shortCut(event) {
+    switch (event.keycode) {
+        case 187:
+        map.setZoom(map.getZoom() + 1);
+        break;
+        case 189:
+        map.setZoom(map.getZoom() - 1);
+        break;
+    }
+}

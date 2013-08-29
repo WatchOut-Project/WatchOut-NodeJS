@@ -1,10 +1,10 @@
 <div id="nav">
     <div id="leftHeaderContent">
-        <button id="menuButton"></button>
+    <input type="button" id="menuButton" onmouseover="MenuOver()" onmouseout="MenuOut()" onmousedown="MenuClicked()" onmouseup="MenuUnClicked()"></input>
     </div>
     <a href="/" id="logo" data-force-refresh="1">WatchOut</a>
 </div>
-<div id="map-canvas"></div>
+<div id="map-canvas" onkeyup="shortCut(event)"></div>
 
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
 <script>
@@ -17,6 +17,24 @@
 </script>
 <script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script>
+<script>
+function MenuOver()
+{
+    document.getElementById("menuButton").style.background="url('/images/menu_bt_clicked.png')";
+}
+function MenuOut()
+{
+    // document.getElementById("menuButton").style.background="url('/images/menu_bt.png')";
+}
+function MenuClicked()
+{
+    document.getElementById("menuButton").style.background="url('/images/menu_bt_clicked.png')";
+}
+function MenuUnClicked()
+{
+    document.getElementById("menuButton").style.background="url('/images/menu_bt.png')";
+}
+</script>
 <style>
     html,
     body {
@@ -38,7 +56,7 @@
     }
     #menuButton {
         position: absolute;
-        background:url('/images/menu.png');
+        background:url('/images/menu_bt.png');
         width: 31px;
         height: 26px;
         margin-left: 15px;
