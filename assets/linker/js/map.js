@@ -18,11 +18,7 @@ function initialize() {
         zoom: 16,
         minZoom: 2,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
-        zoomControl: true,
-        zoomControlOptions: {
-            style: google.maps.ZoomControlStyle.SMALL,
-            position: google.maps.ControlPosition.RIGHT_TOP
-        },
+        zoomControl: false,
         mapTypeControl: false,
         panControl: false,
         scaleControl: true,

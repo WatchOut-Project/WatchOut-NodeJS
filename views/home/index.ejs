@@ -6,17 +6,9 @@
 </div>
 <div id="map-canvas" onkeyup="shortCut(event)"></div>
 
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js'></script>
-<script>
-    $(function () {
-        var body = $(this).find("body");
-        var nav = $(this).find("#nav");
-        var map = $(this).find("#map-canvas");
-        map.css("height", body.height() - nav.height());
-    });
-</script>
-<script type='text/javascript' src='http://code.jquery.com/jquery-1.7.1.js'></script>
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script type="text/javascript" src="/linker/js/map.js"></script>
+
 <script>
 function MenuOver()
 {
@@ -44,6 +36,9 @@ function MenuUnClicked()
         padding: 0px;
     }
     #nav {
+        position: absolute;
+        top: 0;
+        left: 0;
         background:url('/images/navi_background.png');
         background-repeat:repeat-x;
         background-color: #e4ad32;
@@ -108,13 +103,13 @@ function MenuUnClicked()
         z-index: 2;
     }
     #map-canvas {
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 0;
         width: 100%;
+        height: 100%;
         margin: 0px;
         padding: 0px;
     }
 </style>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
-<script type="text/javascript" src="/linker/js/map.js"></script>
