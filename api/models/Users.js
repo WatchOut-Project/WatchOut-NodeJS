@@ -25,11 +25,11 @@ module.exports = {
     password: {
         type: 'string',
         required: true
-    }
+    },
 
     facebook: {
         type: 'string'
-    }
+    },
 
     googleplus: {
         type: 'string'
