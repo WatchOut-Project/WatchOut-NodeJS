@@ -17,7 +17,7 @@ module.exports = {
         minLength: 5
     },
 
-    emailAddress: {
+    email: {
         type: 'email',
         required: true
     },

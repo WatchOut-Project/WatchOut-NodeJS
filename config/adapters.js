@@ -16,7 +16,7 @@ module.exports.adapters = {
 
   // If you leave the adapter config unspecified
   // in a model definition, 'default' will be used./23
-  'default': 'disk',
+  'default': 'mongo',
 
   // In-memory adapter for DEVELOPMENT ONLY
   memory: {
@@ -48,5 +48,8 @@ module.exports.adapters = {
     password : 'dsa372je382k8sgqa4hadm2g6g',
     database : 'heroku_app17543428'
   }
+
+  // Shell Command
+  // mongo heroku_app17543428 --host ds039768.mongolab.com --port 39768 --username heroku_app17543428 --password dsa372je382k8sgqa4hadm2g6g
 
 };
