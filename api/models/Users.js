@@ -27,6 +27,14 @@ module.exports = {
         required: true
     }
 
+    facebook: {
+        type: 'string'
+    }
+
+    googleplus: {
+        type: 'string'
+    }
+
   }
 
 };
