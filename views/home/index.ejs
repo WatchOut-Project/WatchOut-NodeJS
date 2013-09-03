@@ -124,8 +124,8 @@ function MenuUnClicked()
     </div>
     <a href="/" id="logo" data-force-refresh="1">WatchOut</a>
     <div id="rightHeaderContent">
-        <a href="#signInModal" data-taget="#signInModal" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Sign In</a>
-        <a href="#signUp" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Sign Up</a>
+        <a href="#signInModal" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Sign In</a>
+        <a href="#signUpModal" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Sign Up</a>
     </div>
 </div>
 <div id="map-canvas" onkeyup="shortCut(event)"></div>
@@ -140,7 +140,7 @@ function MenuUnClicked()
         <form class="form-horizontal">
             <div class="control-group">
                 <div class="controls">
-                    <input type="text" id="inputEmail" placeholder="Email">
+                    <input type="text" id="inputEmailorID" placeholder="Email or ID">
                 </div>
             </div>
             <div class="control-group">
@@ -151,6 +151,42 @@ function MenuUnClicked()
             <div class="control-group">
                 <div class="controls">
                     <button type="submit" class="btn">Sign in</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary">Connect to Facebook</button>
+        <button class="btn btn-danger">Connect to Google+</button>
+    </div>
+</div>
+
+<!-- Sign Up Modal -->
+<div id="signUpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Join WATCH OUT</h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal">
+            <div class="control-group">
+                <div class="controls">
+                    <input type="text" id="inputId" placeholder="ID">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input type="text" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input type="password" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn">Sign Up</button>
                 </div>
             </div>
         </form>
