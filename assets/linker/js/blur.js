@@ -59,225 +59,225 @@
                 t = t.next = new BlurStack();
                 if(i == q) var u = t
             }
-            t.next = s;
-            var v = null;
-            var w = null;
-            yw = yi = 0;
-            var z = mul_table[g];
-            var A = shg_table[g];
-            for(y = 0; y < f; y++) {
-                r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
-                r_out_sum = q * (pr = k[yi]);
-                g_out_sum = q * (pg = k[yi + 1]);
-                b_out_sum = q * (pb = k[yi + 2]);
-                r_sum += r * pr;
-                g_sum += r * pg;
-                b_sum += r * pb;
-                t = s;
-                for(i = 0; i < q; i++) {
-                    t.r = pr;
-                    t.g = pg;
-                    t.b = pb;
-                    t = t.next
-                }
-                for(i = 1; i < q; i++) {
-                    p = yi + ((n < i ? n : i) << 2);
-                    r_sum += (t.r = (pr = k[p])) * (rbs = q - i);
-                    g_sum += (t.g = (pg = k[p + 1])) * rbs;
-                    b_sum += (t.b = (pb = k[p + 2])) * rbs;
-                    r_in_sum += pr;
-                    g_in_sum += pg;
-                    b_in_sum += pb;
-                    t = t.next
-                }
-                v = s;
-                w = u;
-                for(x = 0; x < d; x++) {
-                    k[yi] = (r_sum * z) >> A;
-                    k[yi + 1] = (g_sum * z) >> A;
-                    k[yi + 2] = (b_sum * z) >> A;
-                    r_sum -= r_out_sum;
-                    g_sum -= g_out_sum;
-                    b_sum -= b_out_sum;
-                    r_out_sum -= v.r;
-                    g_out_sum -= v.g;
-                    b_out_sum -= v.b;
-                    p = (yw + ((p = x + g + 1) < n ? p : n)) << 2;
-                    r_in_sum += (v.r = k[p]);
-                    g_in_sum += (v.g = k[p + 1]);
-                    b_in_sum += (v.b = k[p + 2]);
-                    r_sum += r_in_sum;
-                    g_sum += g_in_sum;
-                    b_sum += b_in_sum;
-                    v = v.next;
-                    r_out_sum += (pr = w.r);
-                    g_out_sum += (pg = w.g);
-                    b_out_sum += (pb = w.b);
-                    r_in_sum -= pr;
-                    g_in_sum -= pg;
-                    b_in_sum -= pb;
-                    w = w.next;
-                    yi += 4
-                }
-                yw += d
+        t.next = s;
+        var v = null;
+        var w = null;
+        yw = yi = 0;
+        var z = mul_table[g];
+        var A = shg_table[g];
+        for(y = 0; y < f; y++) {
+            r_in_sum = g_in_sum = b_in_sum = r_sum = g_sum = b_sum = 0;
+            r_out_sum = q * (pr = k[yi]);
+            g_out_sum = q * (pg = k[yi + 1]);
+            b_out_sum = q * (pb = k[yi + 2]);
+            r_sum += r * pr;
+            g_sum += r * pg;
+            b_sum += r * pb;
+            t = s;
+            for(i = 0; i < q; i++) {
+                t.r = pr;
+                t.g = pg;
+                t.b = pb;
+                t = t.next
             }
+            for(i = 1; i < q; i++) {
+                p = yi + ((n < i ? n : i) << 2);
+                r_sum += (t.r = (pr = k[p])) * (rbs = q - i);
+                g_sum += (t.g = (pg = k[p + 1])) * rbs;
+                b_sum += (t.b = (pb = k[p + 2])) * rbs;
+                r_in_sum += pr;
+                g_in_sum += pg;
+                b_in_sum += pb;
+                t = t.next
+            }
+            v = s;
+            w = u;
             for(x = 0; x < d; x++) {
-                g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
-                yi = x << 2;
-                r_out_sum = q * (pr = k[yi]);
-                g_out_sum = q * (pg = k[yi + 1]);
-                b_out_sum = q * (pb = k[yi + 2]);
-                r_sum += r * pr;
-                g_sum += r * pg;
-                b_sum += r * pb;
-                t = s;
-                for(i = 0; i < q; i++) {
-                    t.r = pr;
-                    t.g = pg;
-                    t.b = pb;
-                    t = t.next
-                }
-                yp = d;
-                for(i = 1; i <= g; i++) {
-                    yi = (yp + x) << 2;
-                    r_sum += (t.r = (pr = k[yi])) * (rbs = q - i);
-                    g_sum += (t.g = (pg = k[yi + 1])) * rbs;
-                    b_sum += (t.b = (pb = k[yi + 2])) * rbs;
-                    r_in_sum += pr;
-                    g_in_sum += pg;
-                    b_in_sum += pb;
-                    t = t.next;
-                    if(i < o) {
-                        yp += d
-                    }
-                }
-                yi = x;
-                v = s;
-                w = u;
-                for(y = 0; y < f; y++) {
-                    p = yi << 2;
-                    k[p] = (r_sum * z) >> A;
-                    k[p + 1] = (g_sum * z) >> A;
-                    k[p + 2] = (b_sum * z) >> A;
-                    r_sum -= r_out_sum;
-                    g_sum -= g_out_sum;
-                    b_sum -= b_out_sum;
-                    r_out_sum -= v.r;
-                    g_out_sum -= v.g;
-                    b_out_sum -= v.b;
-                    p = (x + (((p = y + q) < o ? p : o) * d)) << 2;
-                    r_sum += (r_in_sum += (v.r = k[p]));
-                    g_sum += (g_in_sum += (v.g = k[p + 1]));
-                    b_sum += (b_in_sum += (v.b = k[p + 2]));
-                    v = v.next;
-                    r_out_sum += (pr = w.r);
-                    g_out_sum += (pg = w.g);
-                    b_out_sum += (pb = w.b);
-                    r_in_sum -= pr;
-                    g_in_sum -= pg;
-                    b_in_sum -= pb;
-                    w = w.next;
-                    yi += d
+                k[yi] = (r_sum * z) >> A;
+                k[yi + 1] = (g_sum * z) >> A;
+                k[yi + 2] = (b_sum * z) >> A;
+                r_sum -= r_out_sum;
+                g_sum -= g_out_sum;
+                b_sum -= b_out_sum;
+                r_out_sum -= v.r;
+                g_out_sum -= v.g;
+                b_out_sum -= v.b;
+                p = (yw + ((p = x + g + 1) < n ? p : n)) << 2;
+                r_in_sum += (v.r = k[p]);
+                g_in_sum += (v.g = k[p + 1]);
+                b_in_sum += (v.b = k[p + 2]);
+                r_sum += r_in_sum;
+                g_sum += g_in_sum;
+                b_sum += b_in_sum;
+                v = v.next;
+                r_out_sum += (pr = w.r);
+                g_out_sum += (pg = w.g);
+                b_out_sum += (pb = w.b);
+                r_in_sum -= pr;
+                g_in_sum -= pg;
+                b_in_sum -= pb;
+                w = w.next;
+                yi += 4
+            }
+            yw += d
+        }
+        for(x = 0; x < d; x++) {
+            g_in_sum = b_in_sum = r_in_sum = g_sum = b_sum = r_sum = 0;
+            yi = x << 2;
+            r_out_sum = q * (pr = k[yi]);
+            g_out_sum = q * (pg = k[yi + 1]);
+            b_out_sum = q * (pb = k[yi + 2]);
+            r_sum += r * pr;
+            g_sum += r * pg;
+            b_sum += r * pb;
+            t = s;
+            for(i = 0; i < q; i++) {
+                t.r = pr;
+                t.g = pg;
+                t.b = pb;
+                t = t.next
+            }
+            yp = d;
+            for(i = 1; i <= g; i++) {
+                yi = (yp + x) << 2;
+                r_sum += (t.r = (pr = k[yi])) * (rbs = q - i);
+                g_sum += (t.g = (pg = k[yi + 1])) * rbs;
+                b_sum += (t.b = (pb = k[yi + 2])) * rbs;
+                r_in_sum += pr;
+                g_in_sum += pg;
+                b_in_sum += pb;
+                t = t.next;
+                if(i < o) {
+                    yp += d
                 }
             }
-            h.putImageData(j, b, c)
+            yi = x;
+            v = s;
+            w = u;
+            for(y = 0; y < f; y++) {
+                p = yi << 2;
+                k[p] = (r_sum * z) >> A;
+                k[p + 1] = (g_sum * z) >> A;
+                k[p + 2] = (b_sum * z) >> A;
+                r_sum -= r_out_sum;
+                g_sum -= g_out_sum;
+                b_sum -= b_out_sum;
+                r_out_sum -= v.r;
+                g_out_sum -= v.g;
+                b_out_sum -= v.b;
+                p = (x + (((p = y + q) < o ? p : o) * d)) << 2;
+                r_sum += (r_in_sum += (v.r = k[p]));
+                g_sum += (g_in_sum += (v.g = k[p + 1]));
+                b_sum += (b_in_sum += (v.b = k[p + 2]));
+                v = v.next;
+                r_out_sum += (pr = w.r);
+                g_out_sum += (pg = w.g);
+                b_out_sum += (pb = w.b);
+                r_in_sum -= pr;
+                g_in_sum -= pg;
+                b_in_sum -= pb;
+                w = w.next;
+                yi += d
+            }
         }
+        h.putImageData(j, b, c)
+    }
 
-        function BlurStack() {
-            this.r = 0;
-            this.g = 0;
-            this.b = 0;
-            this.a = 0;
-            this.next = null
-        }
-        return this.each(function () {
-            var $glue = $(this);
-            var $source = $(options.source);
-            var formattedSource = ($source.css('backgroundImage')).replace(/"/g, "").replace(/url\(|\)$/ig, "");
-            ctx = canvas.getContext('2d');
-            tempImg = new Image();
-            tempImg.onload = function () {
-                if(!isCached) {
-                    canvas.style.display = "none";
-                    canvas.width = tempImg.width;
-                    canvas.height = tempImg.height;
-                    ctx.drawImage(tempImg, 0, 0);
-                    stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, options.radius);
-                    if(options.overlay != false) {
-                        ctx.beginPath();
-                        ctx.rect(0, 0, tempImg.width, tempImg.width);
-                        ctx.fillStyle = options.overlay;
-                        ctx.fill();
-                    }
-                    var blurredData = canvas.toDataURL();
-                    if(options.cache) {
-                        try {
-                            if(options.debug) {
-                                console.log('Cache Set');
-                            }
-                            localStorage.setItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-data-image', blurredData);
-                        } catch(e) {
-                            console.log(e);
+    function BlurStack() {
+        this.r = 0;
+        this.g = 0;
+        this.b = 0;
+        this.a = 0;
+        this.next = null
+    }
+    return this.each(function () {
+        var $glue = $(this);
+        var $source = $(options.source);
+        var formattedSource = ($source.css('backgroundImage')).replace(/"/g, "").replace(/url\(|\)$/ig, "");
+        ctx = canvas.getContext('2d');
+        tempImg = new Image();
+        tempImg.onload = function () {
+            if(!isCached) {
+                canvas.style.display = "none";
+                canvas.width = tempImg.width;
+                canvas.height = tempImg.height;
+                ctx.drawImage(tempImg, 0, 0);
+                stackBlurCanvasRGB(canvas, 0, 0, canvas.width, canvas.height, options.radius);
+                if(options.overlay != false) {
+                    ctx.beginPath();
+                    ctx.rect(0, 0, tempImg.width, tempImg.width);
+                    ctx.fillStyle = options.overlay;
+                    ctx.fill();
+                }
+                var blurredData = canvas.toDataURL();
+                if(options.cache) {
+                    try {
+                        if(options.debug) {
+                            console.log('Cache Set');
                         }
-                    }
-                } else {
-                    var blurredData = tempImg.src;
-                }
-                var attachment = $source.css('backgroundAttachment');
-                var position = (attachment == 'fixed') ? '' : '-' + (($glue.offset().left) - ($source.offset().left) - (options.offset.x)) + 'px -' + (($glue.offset().top) - ($source.offset().top) - (options.offset.y)) + 'px';
-                $glue.css({
-                    'background-image': 'url("' + blurredData + '")',
-                    'background-repeat': $source.css('backgroundRepeat'),
-                    'background-position': position,
-                    'background-attachment': attachment
-                });
-                if(options.optClass != false) {
-                    $glue.addClass(options.optClass);
-                }
-                if(options.draggable) {
-                    $glue.css({
-                        'background-attachment': 'fixed',
-                        'background-position': '0 0'
-                    });
-                    $glue.draggable();
-                }
-            };
-            Storage.prototype.cacheChecksum = function (opts) {
-                var newData = '';
-                for(var key in opts) {
-                    var obj = opts[key];
-                    if(obj.toString() == '[object Object]') {
-                        newData += ((obj.x).toString() + (obj.y).toString() + ",").replace(/[^a-zA-Z0-9]/g, "");
-                    } else {
-                        newData += (obj + ",").replace(/[^a-zA-Z0-9]/g, "");
+                        localStorage.setItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-data-image', blurredData);
+                    } catch(e) {
+                        console.log(e);
                     }
                 }
-                var originalData = this.getItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache');
-                if(originalData != newData) {
-                    this.removeItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache');
-                    this.setItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache', newData);
-                    if(options.debug) {
-                        console.log('Settings Changed, Cache Emptied');
-                    }
-                }
-            };
-            var cachedData = null;
-            if(options.cache) {
-                localStorage.cacheChecksum(options);
-                cachedData = localStorage.getItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-data-image');
-            }
-            if(cachedData != null) {
-                if(options.debug) {
-                    console.log('Cache Used');
-                }
-                isCached = true;
-                tempImg.src = (cachedData);
             } else {
-                if(options.debug) {
-                    console.log('Source Used');
-                }
-                tempImg.src = formattedSource;
+                var blurredData = tempImg.src;
             }
-        });
-    };
+            var attachment = $source.css('backgroundAttachment');
+            var position = (attachment == 'fixed') ? '' : '-' + (($glue.offset().left) - ($source.offset().left) - (options.offset.x)) + 'px -' + (($glue.offset().top) - ($source.offset().top) - (options.offset.y)) + 'px';
+            $glue.css({
+                'background-image': 'url("' + blurredData + '")',
+                'background-repeat': $source.css('backgroundRepeat'),
+                'background-position': position,
+                'background-attachment': attachment
+            });
+            if(options.optClass != false) {
+                $glue.addClass(options.optClass);
+            }
+            if(options.draggable) {
+                $glue.css({
+                    'background-attachment': 'fixed',
+                    'background-position': '0 0'
+                });
+                $glue.draggable();
+            }
+        };
+        Storage.prototype.cacheChecksum = function (opts) {
+            var newData = '';
+            for(var key in opts) {
+                var obj = opts[key];
+                if(obj.toString() == '[object Object]') {
+                    newData += ((obj.x).toString() + (obj.y).toString() + ",").replace(/[^a-zA-Z0-9]/g, "");
+                } else {
+                    newData += (obj + ",").replace(/[^a-zA-Z0-9]/g, "");
+                }
+            }
+            var originalData = this.getItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache');
+            if(originalData != newData) {
+                this.removeItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache');
+                this.setItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-options-cache', newData);
+                if(options.debug) {
+                    console.log('Settings Changed, Cache Emptied');
+                }
+            }
+        };
+        var cachedData = null;
+        if(options.cache) {
+            localStorage.cacheChecksum(options);
+            cachedData = localStorage.getItem(options.cacheKeyPrefix + selector + '-' + formattedSource + '-data-image');
+        }
+        if(cachedData != null) {
+            if(options.debug) {
+                console.log('Cache Used');
+            }
+            isCached = true;
+            tempImg.src = (cachedData);
+        } else {
+            if(options.debug) {
+                console.log('Source Used');
+            }
+            tempImg.src = formattedSource;
+        }
+    });
+};
 })(jQuery);

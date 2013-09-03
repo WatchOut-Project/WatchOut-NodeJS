@@ -27,11 +27,11 @@ module.exports = {
         required: true
     },
 
-    facebook: {
+    facebookToken: {
         type: 'string'
     },
 
-    googleplus: {
+    googlelusToken: {
         type: 'string'
     }
 
