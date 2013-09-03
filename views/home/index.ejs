@@ -1,24 +1,6 @@
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 <script type="text/javascript" src="/linker/js/map.js"></script>
 
-<script>
-    function MenuOver()
-    {
-        document.getElementById("menuButton").style.background="url('/images/menu_bt_clicked.png')";
-    }
-    function MenuOut()
-    {
-        document.getElementById("menuButton").style.background="url('/images/menu_bt.png')";
-    }
-    function MenuClicked()
-    {
-        document.getElementById("menuButton").style.background="url('/images/menu_bt_clicked.png')";
-    }
-    function MenuUnClicked()
-    {
-        document.getElementById("menuButton").style.background="url('/images/menu_bt.png')";
-    }
-</script>
 <style>
     html,
     body {
@@ -120,7 +102,7 @@
 
 <div id="nav">
     <div id="leftHeaderContent">
-        <input type="button" id="menuButton" onmouseover="MenuOver()" onmouseout="MenuOut()" onmousedown="MenuClicked()" onmouseup="MenuUnClicked()"></input>
+        <input type="button" id="menuButton" clase="btn btn-warning"></input>
     </div>
     <a href="/" id="logo" data-force-refresh="1">WatchOut</a>
     <div id="rightHeaderContent">
@@ -129,70 +111,11 @@
     </div>
 </div>
 <div id="map-canvas" onkeyup="shortCut(event)"></div>
-
-<!-- Sign In Modal -->
-<div id="signInModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Sign in to WATCH OUT</h3>
-    </div>
-    <div class="modal-body">
-        <form class="form-horizontal">
-            <div class="control-group">
-                <div class="controls">
-                    <input type="text" id="inputEmailorID" placeholder="Email or ID">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input type="password" id="inputPassword" placeholder="Password">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" class="btn">Sign in</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary">Connect to Facebook</button>
-        <button class="btn btn-danger">Connect to Google+</button>
-    </div>
-</div>
-
-<!-- Sign Up Modal -->
-<div id="signUpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Join WATCH OUT</h3>
-    </div>
-    <div class="modal-body">
-        <form class="form-horizontal">
-            <div class="control-group">
-                <div class="controls">
-                    <input type="text" id="inputId" placeholder="ID">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input type="text" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <input type="password" id="inputPassword" placeholder="Password">
-                </div>
-            </div>
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" class="btn">Sign Up</button>
-                </div>
-            </div>
-        </form>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary">Connect to Facebook</button>
-        <button class="btn btn-danger">Connect to Google+</button>
-    </div>
-</div>
+<script>
+    $(function(){
+        $("#signinmodal").load("/signin.html");
+        $("#signupmodal").load("./modals/signup.ejs");
+  });
+</script>
+<div id="signinmodal"></div>
+<div id="signupmodal"></div>
