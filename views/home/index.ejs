@@ -111,11 +111,5 @@
     </div>
 </div>
 <div id="map-canvas" onkeyup="shortCut(event)"></div>
-<script>
-    $(function(){
-        $("#signinmodal").load("/signin.html");
-        $("#signupmodal").load("./modals/signup.ejs");
-  });
-</script>
-<div id="signinmodal"></div>
-<div id="signupmodal"></div>
+<% include ../modals/signin %>
+<% include ../modals/signup %>
