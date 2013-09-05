@@ -31,7 +31,7 @@ module.exports = {
         type: 'string'
     },
 
-    googlelusToken: {
+    googleplusToken: {
         type: 'string'
     }
 
