@@ -30,25 +30,25 @@ module.exports.routes = {
 
   // By default, your root route (aka home page) points to a view
   // located at `views/home/index.ejs`
-  // 
+  //
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': {
     view: 'home/index'
   },
   '/login' : {
-    controller : 'users',
+    controller : 'auth',
     action     : 'login'
   },
   '/process' : {
-    controller : 'users',
+    controller : 'auth',
     action     : 'process'
   },
   '/logout' : {
-    controller : 'users',
+    controller : 'auth',
     action     : 'logout'
   },
   '/register': {
-    controller : 'users',
+    controller : 'auth',
     action     : 'register'
   }
 
@@ -84,7 +84,7 @@ module.exports.routes = {
   // If you want to set up a route only for one in particular
   // (GET, POST, PUT, DELETE, etc.), just specify the verb before the path.
   // For example, if you have a `UserController` with a `signup` action,
-  // and somewhere else, you're serving a signup form looks like: 
+  // and somewhere else, you're serving a signup form looks like:
   //
   //		<form action="/signup">
   //			<input name="username" type="text"/>
@@ -182,4 +182,3 @@ module.exports.routes = {
  * Finally, if nothing else matched, the default 404 handler is triggered.
  * See `config/404.js` to adjust your app's 404 logic.
  */
- 

@@ -7,7 +7,7 @@
 
 module.exports = {
 
-  	create: function(req, res)
+  create: function(req, res)
 	{
 		if(req.body)
 		{
@@ -35,44 +35,6 @@ module.exports = {
 			res.redirect('/login');
 			return;
 		}
-	},
-
-	index: function(req, res)
-	{
-		Users.findAll()
-		.done(
-			function(err, users)
-			{
-				if (err) {
-					res.cookie('error', "There was an error" + err);
-					res.redirect('/');
-					return;
-				} else {
-					return res.view({
-						users: users
-					});
-				}
-			}
-		);
-	},
-
-	view: function(req, res)
-	{
-		Users.find(req.params.id)
-		.done(
-			function(err, user)
-			{
-				if (err) {
-					res.cookie('error', "There was an error" + err);
-					res.redirect('/');
-					return;
-				} else {
-					return res.view({
-						user: user
-					});
-				}
-			}
-		);
 	}
 
 };

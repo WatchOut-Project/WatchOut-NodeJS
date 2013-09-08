@@ -13,8 +13,8 @@ module.exports = {
 	{
 		res.view();
 	},
- 
-	process: function(req, res)
+
+	login: function(req, res)
 	{
 		passport.authenticate(
 			'local',
@@ -26,7 +26,7 @@ module.exports = {
 					res.redirect('/login');
 					return;
 				}
-	 
+
 				req.logIn(
 					user,
 					function(err)
@@ -37,7 +37,7 @@ module.exports = {
 							res.redirect('/login');
 							return;
 						}
-						
+
 						res.redirect('/');
 						return;
 					}
@@ -45,13 +45,8 @@ module.exports = {
 			}
 		)(req, res);
 	},
- 
- 	login: function (req, res)
- 	{
-		res.view();
- 	},
- 	
-	logout: function (req,res)
+
+	logout: function (req, res)
 	{
 		req.logout();
 		res.redirect('/login');
@@ -66,6 +61,6 @@ module.exports = {
 			return;
 		}
 		res.view();
-	}  
+	}
 
 };

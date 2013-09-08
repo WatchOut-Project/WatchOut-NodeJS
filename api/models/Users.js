@@ -13,16 +13,18 @@ module.exports = {
     username: {
         type: 'string',
         required: true,
+        unique: true,
         maxLength: 20,
         minLength: 5
     },
 
     email: {
         type: 'email',
-        required: true
+        required: true,
+        unique: true
     },
 
-    password: {
+    pass: {
         type: 'string',
         required: true
     },
@@ -33,8 +35,26 @@ module.exports = {
 
     googleplusToken: {
         type: 'string'
+    },
+
+    toJSON: function() {
+      var obj = this.toObject();
+      delete obj.pass;
+      return obj;
     }
 
   }
 
 };
+
+module.exports.hashPass = function(pass)
+{
+    var hasher = require('password-hash');
+    return hasher.generate(pass);
+}
+
+module.exports.checkPass = function(pass, stored)
+{
+    var hasher = require('password-hash');
+    return hasher.verify(pass, stored);
+}
