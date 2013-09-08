@@ -11,7 +11,7 @@ module.exports = {
 	{
 		if(req.body)
 		{
-			req.body.pass = Users.hashPass(req.body.pass);
+			req.body.password = Users.hashPass(req.body.password);
 			Users.create(req.body).done(
 				function(err, user)
 				{
