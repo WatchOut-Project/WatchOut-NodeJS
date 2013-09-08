@@ -1,8 +1,8 @@
 <!-- Sign Up Modal -->
-<div id="signUpModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="registerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Join WATCH OUT</h3>
+        <h3 id="myModalLabel">Register</h3>
     </div>
     <div class="modal-body">
         <form class="form-horizontal">
@@ -23,13 +23,13 @@
             </div>
             <div class="control-group">
                 <div class="controls">
-                    <button type="submit" class="btn">Sign Up</button>
+                    <button type="submit" class="btn">Register</button>
                 </div>
             </div>
         </form>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary">Connect to Facebook</button>
-        <button class="btn btn-danger">Connect to Google+</button>
+        <a href="/auth/facebook" class="btn btn-primary">Connect to Facebook</a>
+        <a href="/auth/google" class="btn btn-danger">Connect to Google+</a>
     </div>
 </div>

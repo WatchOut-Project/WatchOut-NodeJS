@@ -29,6 +29,7 @@
     password: {
         type: 'string',
         required: true,
+        minLength: '6',
         columnName: 'encrypted_password'
     },
 
