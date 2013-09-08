@@ -1,13 +1,14 @@
 /**
- * Users
+ * User
  *
  * @module      :: Model
  * @description :: A short summary of how this model works and what it represents.
  *
  */
-var bcrypt = require('bcrypt');
 
-module.exports = {
+ var bcrypt = require('bcrypt');
+
+ module.exports = {
 
   attributes: {
 
@@ -43,9 +44,9 @@ module.exports = {
       var obj = this.toObject();
       delete obj.password;
       return obj;
-    }
+  }
 
-  },
+},
 
   // Lifecycle Callbacks
   beforeCreate: function(values, next) {
@@ -53,8 +54,8 @@ module.exports = {
       if(err) return next(err);
       values.password = hash;
       next();
-    });
-  }
+  });
+}
 
 };
 
