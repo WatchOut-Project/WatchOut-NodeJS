@@ -32,8 +32,16 @@
         columnName: 'encrypted_password'
     },
 
+    watchoutToken: {
+        type: 'string'
+    },
+
     facebookToken: {
         type: 'string'
+    },
+
+    facebookTokenExpire: {
+      type: 'date'
     },
 
     googleplusToken: {
