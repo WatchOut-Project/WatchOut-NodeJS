@@ -9,58 +9,63 @@ var passport = require('passport');
 
 module.exports = {
 
-	index: function (req,res)
-	{
-		res.view();
-	},
+  register: function (req, res) {
 
-	login: function(req, res)
-	{
-		passport.authenticate(
-			'local',
-			function(err, user, info)
-			{
-				if ((err) || (!user))
-				{
-					res.cookie('error', info.message);
-					res.redirect('/login');
-					return;
-				}
+  },
 
-				req.logIn(
-					user,
-					function(err)
-					{
-						if (err)
-						{
-							res.cookie('error', err);
-							res.redirect('/login');
-							return;
-						}
+  login: function (req, res) {
 
-						res.redirect('/');
-						return;
-					}
-				);
-			}
-		)(req, res);
-	},
+  },
 
-	logout: function (req, res)
-	{
-		req.logout();
-		res.redirect('/login');
-	},
+  logout: function (req, res) {
+      req.logout();
+      res.redirect('/');
+  },
 
-	register: function (req, res)
-	{
-		if(req.isAuthenticated())
-		{
-			res.cookie('info', "You can't register while logged in.");
-			res.redirect('/');
-			return;
-		}
-		res.view();
-	}
+  'github': function (req, res) {
+      passport.authenticate('github', { failureRedirect: '/login' },
+          function (err, user) {
+              req.logIn(user, function (err) {
+                  if (err) {
+                      console.log(err);
+                      res.view('500');
+                      return;
+                  }
+
+                  res.redirect('/');
+                  return;
+              });
+          })(req, res);
+  },
+
+  'github/callback': function (req, res) {
+      passport.authenticate('github',
+          function (req, res) {
+              res.redirect('/');
+          })(req, res);
+  },
+
+  'google': function (req, res) {
+      passport.authenticate('google', { failureRedirect: '/login', scope:['https://www.googleapis.com/auth/plus.login','https://www.googleapis.com/auth/userinfo.profile'] },
+          function (err, user) {
+              req.logIn(user, function (err) {
+                  if (err) {
+                      console.log(err);
+                      res.view('500');
+                      return;
+                  }
+
+                  res.redirect('/');
+                  return;
+              });
+          })(req, res);
+  },
+
+  'google/callback': function (req, res) {
+      passport.authenticate('google',
+          function (req, res) {
+              res.redirect('/');
+          })(req, res);
+  }
 
 };
