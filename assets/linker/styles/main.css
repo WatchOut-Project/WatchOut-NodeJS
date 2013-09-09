@@ -10,6 +10,10 @@ html, body {
 #leftHeaderContent {
     display: block;
     float: left;
+    margin-left: 10px
+}
+#dropDownMenu {
+    margin: 5px;
 }
 #rightHeaderContent {
     display: block;
@@ -59,29 +63,6 @@ html, body {
     zoom: 1;
     font: 0/0 serif;
     text-shadow: none;
-}
-#sign {
-    position: relative;
-}
-#sign-in {
-    color: #ffffff;
-    text-align: right;
-    opacity: 1;
-    padding: 0;
-    margin: 50px;
-    font-style: bold;
-    font-family:"Verdana", sans-serif;
-    z-index: 2;
-}
-#sign-up {
-    color: #ffffff;
-    text-align: right;
-    opacity: 1;
-    padding: 0;
-    margin: 0;
-    font-style: bold;
-    font-family:"Verdana", sans-serif;
-    z-index: 2;
 }
 #map-canvas {
     position: absolute;
