@@ -12,6 +12,12 @@
 
   attributes: {
 
+    id: {
+      type: 'integer',
+      unique: true,
+      min: 1
+    },
+
     username: {
         type: 'string',
         required: true,
@@ -59,22 +65,21 @@
 
   // Lifecycle Callbacks
   beforeCreate: function(values, next) {
+
     bcrypt.hash(values.password, 10, function(err, hash) {
       if(err) return next(err);
       values.password = hash;
-      next();
-    });
-  },
 
-  afterCreate: function(newlyInsertedRecord, next) {
-    newlyInsertedRecord._id = 0;
-    User.find().limit(1).sort('_id ASC').done(function(err, users) {
-      if (err) {
-        return next(err);
-      } else {
-        newlyInsertedRecord._id = users[0]._id + 1;
+      User.find().limit(1).sort('createdAt DESC').done(function(err, users) {
+        if (err) return next(err);
+
+        if (users.length == 0)
+          values.id = 1;
+        else
+          values.id = parseInt(users[0].id)+ 1;
+
         next();
-      }
+      });
     });
   }
 
