@@ -63,19 +63,19 @@
       if(err) return next(err);
       values.password = hash;
       next();
-  });
-}
+    });
+  },
+
+  afterCreate: function(newlyInsertedRecord, next) {
+    newlyInsertedRecord._id = 0;
+    User.find().limit(1).sort('_id ASC').done(function(err, users) {
+      if (err) {
+        return next(err);
+      } else {
+        newlyInsertedRecord._id = users[0]._id + 1;
+        next();
+      }
+    });
+  }
 
 };
-
-// module.exports.hashPass = function(pass)
-// {
-//     var hasher = require('password-hash');
-//     return hasher.generate(pass);
-// }
-
-// module.exports.checkPass = function(pass, stored)
-// {
-//     var hasher = require('password-hash');
-//     return hasher.verify(pass, stored);
-// }
