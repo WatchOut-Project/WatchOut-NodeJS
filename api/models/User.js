@@ -59,9 +59,9 @@
       var obj = this.toObject();
       delete obj.password;
       return obj;
-  }
+    }
 
-},
+  },
 
   // Lifecycle Callbacks
   beforeCreate: function(values, next) {
