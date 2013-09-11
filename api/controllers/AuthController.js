@@ -14,7 +14,7 @@ module.exports = {
   },
 
   login: function (req, res) {
-
+    res.view();
   },
 
   logout: function (req, res) {

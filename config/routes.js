@@ -35,13 +35,20 @@ module.exports.routes = {
   '/': {
     view: 'home/index'
   },
-  '/login' : {
-    controller : 'home',
-    action     : 'login'
+
+  '/login': {
+    controller: 'auth',
+    action: 'login'
   },
+
   '/register': {
-    controller : 'home',
-    action     : 'register'
+    controller: 'auth',
+    action: 'register'
+  },
+
+  '/logout': {
+    controller: 'auth',
+    action: 'logout'
   }
 
   /*
