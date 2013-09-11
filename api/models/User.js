@@ -12,6 +12,12 @@
 
   attributes: {
 
+    userid: {
+      type: 'integer',
+      unique: true,
+      min: 1
+    },
+
     username: {
         type: 'string',
         required: true,
@@ -64,18 +70,16 @@
       if(err) return next(err);
       values.password = hash;
 
-      // User.find().limit(1).sort('createdAt DESC').done(function(err, users) {
-      //   if (err) return next(err);
+      User.find().limit(1).sort('createdAt DESC').done(function(err, users) {
+        if (err) return next(err);
 
-      //   console.log(users[0]);
-
-      //   if (users.length == 0)
-      //     values._id = '1';
-      //   else
-      //     values._id = (parseInt(users[0]._id, 10)+ 1).toString();
+        if (users.length == 0)
+          values.userid = '1';
+        else
+          values.userid = (parseInt(users[0].userid, 10)+ 1).toString();
 
         next();
-      // });
+      });
     });
   }
 

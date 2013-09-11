@@ -41,15 +41,33 @@ module.exports.routes = {
     action: 'login'
   },
 
-  '/register': {
+  // 'post /signup': 'AuthController.register'
+
+  'post /register': {
     controller: 'auth',
     action: 'register'
   },
 
+  // 'post /register': {
+  //   controller: 'auth',
+  //   action: 'register'
+  // },
+
   '/logout': {
     controller: 'auth',
     action: 'logout'
-  }
+  },
+
+  '/auth/facebook': {
+    controller: 'auth',
+    action: 'facebook'
+  },
+
+  '/auth/google': {
+    controller: 'auth',
+    action: 'google'
+  },
+
 
   /*
   // But what if you want your home page to display

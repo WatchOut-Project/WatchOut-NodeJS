@@ -25,4 +25,39 @@ module.exports = {
 	// 		res.send(userJSON);
 	// 	});
 	// }
+
+	// create: function(req, res)
+	// {
+
+	// 	if(req.body)
+	// 	{
+	// 		console.log("body : " + req.param('username'));
+	// 		console.log("JSON : " + req.isJson);
+	// 		// req.body.pass = Users.hashPass(req.body.pass);
+	// 		// Users.create(req.body).done(
+	// 		// 	function(err, user)
+	// 		// 	{
+	// 		// 		if (err)
+	// 		// 		{
+	// 		// 			res.cookie('error', "There was an error" + err);
+	// 		// 			res.redirect('/register');
+	// 		// 			return;
+	// 		// 		}
+	// 		// 		else
+	// 		// 		{
+	// 		// 			res.cookie('info', "You have succesfully registered.");
+	// 		// 			res.redirect('/login');
+	// 		// 			return;
+	// 		// 	  	}
+	// 		// 	}
+	// 		// );
+	// 		return;
+	// 	}
+	// 	else
+	// 	{
+	// 		console.log("nobody");
+	// 		// res.redirect('/login');
+	// 		return;
+	// 	}
+	// }
 };
