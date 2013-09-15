@@ -48,7 +48,6 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
-	background-color: #ffffff;
 }
 #loginModalPassword {
 	position: fixed;
@@ -59,7 +58,6 @@
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
-	background-color: #ffffff;
 }
 .loginModalControl {
 	position: fixed;
