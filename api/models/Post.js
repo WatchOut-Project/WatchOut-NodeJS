@@ -21,18 +21,6 @@ module.exports = {
       minLength: 10
     },
 
-    latitude: {
-      type: 'float',
-      unique: true,
-      required: true
-    },
-
-    longitude: {
-      type: 'float',
-      unique: true,
-      required: true
-    },
-
     pictures: {
       type: 'array',
       defaultsTo: []
