@@ -10,6 +10,7 @@ var passport = require('passport');
 module.exports = {
 
   register: function (req, res) {
+    console.log("ok");
     if (req.body) {
       User.create({
         username: req.param('username'),

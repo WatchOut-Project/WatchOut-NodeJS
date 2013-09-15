@@ -3,25 +3,25 @@
     <div class="modal-body">
         <button id="registerModalClose" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="registerModalLabel">Register</h3>
-        <form id="registerModalForm" class="form-horizontal" action="/register">
+        <form id="registerModalForm" class="form-horizontal" action="/register" method="post">
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalUsername" type="text" name="username" placeholder="Username" autocomplete="off">
+                    <input id="registerModalUsername" type="text" name="username" placeholder="Username">
                 </div>
             </div>
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalEmail" type="text" name="email" placeholder="Email" autocomplete="off">
+                    <input id="registerModalEmail" type="text" name="email" placeholder="Email">
                 </div>
             </div>
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalPassword" type="password" name="password" placeholder="Password" autocomplete="off">
+                    <input id="registerModalPassword" type="password" name="password" placeholder="Password">
                 </div>
             </div>
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalRetypePassword" type="password" name="password" placeholder="Re-type Password" autocomplete="off">
+                    <input id="registerModalRetypePassword" type="password" name="retypedpassword" placeholder="Re-type your password">
                 </div>
             </div>
             <div class="registerModalControl control-group">
@@ -29,8 +29,6 @@
                     <button id="registerModalRoundButton" type="submit" class="btn">Register</button>
                 </div>
             </div>
-            <a id="registerModalHaveAccount" href="#loginModal" data-toggle="modal">Already have account?</a>
-            <a id="registerModalForgotUsername" href="/auth/facebook">Forgot your Username?</a>
         </form>
 
         <a id="registerModalFacebook" href="/auth/facebook" class="btn btn-primary">Connect to Facebook</a>
