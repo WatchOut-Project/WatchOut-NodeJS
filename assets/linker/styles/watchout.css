@@ -1,0 +1,41 @@
+.btn-watchout {
+  color: #ffffff;
+  text-shadow: 0;
+  background-color: #ffffff;
+  background-image: #ffffff;
+  background-image: #ffffff;
+  background-image: #ffffff;
+  background-image: #ffffff;
+  background-image: #ffffff;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffbd362f', GradientType=0);
+  border-color: #cccccc #cccccc #cccccc;
+  *background-color: #ffffff;
+  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.btn-watchout:hover,
+.btn-watchout:focus,
+.btn-watchout:active,
+.btn-watchout.active,
+.btn-watchout.disabled,
+.btn-watchout[disabled] {
+  color: #ffffff;
+  background-color: #bd362f;
+  *background-color: #a9302a;
+}
+.btn-watchout:active,
+.btn-watchout.active {
+  background-color: #F6AD18 \9;
+}
+
+a {
+  color: #aaaaaa;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: #F6AD18;
+  text-decoration: underline;
+}

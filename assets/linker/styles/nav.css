@@ -24,9 +24,7 @@ html, body {
     position: absolute;
     top: 0;
     left: 0;
-    background:url('/images/navi_background.png');
-    background-repeat:repeat-x;
-    background-color: #e4ad32;
+    background-color: #F6AD18;
     opacity: 1;
     height: 42px;
     width: 100%;
