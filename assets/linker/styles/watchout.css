@@ -39,3 +39,8 @@ a:focus {
   color: #F6AD18;
   text-decoration: underline;
 }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+    color: #ffffff !important;
+}
