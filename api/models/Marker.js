@@ -9,12 +9,6 @@
 module.exports = {
 
   attributes: {
-  	
-  	markerid: {
-  		type: 'integer',
-  		unique: true,
-  		min: 1
-  	},
 
     latitude: {
       type: 'float',

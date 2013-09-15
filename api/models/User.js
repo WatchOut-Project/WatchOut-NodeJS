@@ -6,17 +6,11 @@
  *
  */
 
- var bcrypt = require('bcrypt');
+var passwordHash = require('password-hash');
 
- module.exports = {
+module.exports = {
 
   attributes: {
-
-    userid: {
-      type: 'integer',
-      unique: true,
-      min: 1
-    },
 
     username: {
         type: 'string',
@@ -57,7 +51,9 @@
 
     toJSON: function() {
       var obj = this.toObject();
-      delete obj.password;
+      // delete obj.password;
+      // delete obj.watchoutToken;
+      // delete obj.email;
       return obj;
     }
 
@@ -65,22 +61,18 @@
 
   // Lifecycle Callbacks
   beforeCreate: function(values, next) {
-
-    bcrypt.hash(values.password, 10, function(err, hash) {
-      if(err) return next(err);
-      values.password = hash;
-
-      User.find().limit(1).sort('createdAt DESC').done(function(err, users) {
-        if (err) return next(err);
-
-        if (users.length == 0)
-          values.userid = '1';
-        else
-          values.userid = (parseInt(users[0].userid, 10)+ 1).toString();
-
-        next();
-      });
-    });
+    values.password = User.hashPass(values.password);
+    next();
   }
 
 };
+
+module.exports.hashPass = function(pass)
+{
+  return passwordHash.generate(pass);
+}
+
+module.exports.checkPass = function(pass, stored)
+{
+  return passwordHash.verify(pass, stored);
+}

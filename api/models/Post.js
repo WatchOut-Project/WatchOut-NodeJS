@@ -10,12 +10,6 @@ module.exports = {
 
   attributes: {
 
-    postid: {
-      type: 'integer',
-      unique: true,
-      min: 1
-    },
-
     message: {
       type: 'string',
       minLength: 10
@@ -41,20 +35,5 @@ module.exports = {
     }
 
   },
-
-  // Lifecycle Callbacks
-  beforeCreate: function(values, next) {
-
-    Post.find().limit(1).sort('createdAt DESC').done(function(err, posts) {
-      if (err) return next(err);
-
-      if (posts.length == 0)
-        values.postid = 1;
-      else
-        values.postid = parseInt(posts[0].postid)+ 1;
-
-      next();
-    });
-  }
 
 };

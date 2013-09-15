@@ -12,8 +12,10 @@
         "optimist": "0.3.4",
         "passport": "latest",
         "passport-local": "latest",
-        "password-hash": "latest",
-        "bcrypt" : "latest"
+        "passport-oauth": "latest",
+        "passport-facebook": "latest",
+        "passport-google": "latest",
+        "password-hash": "latest"
     },
     "scripts": {
         "start": "node app.js",

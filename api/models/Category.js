@@ -10,12 +10,6 @@ module.exports = {
 
   attributes: {
 
-  	categoryid: {
-  		type: 'integer',
-  		unique: true,
-  		min: 1
-  	},
-
   	categoryname: {
   		type: 'string'
   	}
