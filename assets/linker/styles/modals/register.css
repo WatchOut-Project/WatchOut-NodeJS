@@ -90,15 +90,15 @@
 #registerModalRoundButton{ 
 	position: fixed;
 	margin: 0;
-	width: 60px;
-	height: 60px;
-     -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -khtml-border-radius: 30px;
-    border-radius: 30px;
+	width: 70px;
+	height: 70px;
+     -moz-border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -khtml-border-radius: 35px;
+    border-radius: 35px;
     padding: 0;
-    margin-top: 270px;
-    margin-left: 240px;
+    margin-top: 265px;
+    margin-left: 230px;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	background-color: #ffffff;
 	background: #ffffff;
