@@ -10,8 +10,46 @@ module.exports = {
 
   attributes: {
 
+    postid: {
+      type: 'integer',
+      unique: true,
+      min: 1
+    },
+
+    message: {
+      type: 'string',
+      minLength: 10;
+    },
+
+    latitude: {
+      type: 'float',
+      unique: true,
+      required: true
+    },
+
+    longitude: {
+      type: 'float',
+      unique: true,
+      required: true
+    },
+
+    pictures: {
+      type: 'array',
+      defaultsTo: []
+    },
+
+    videos: {
+      type: 'array',
+      defaultsTo: []
+    },
+
+    category: {
+      type: 'string'
+    },
+
     comments: {
-      type: 'array'
+      type: 'array',
+      defaultsTo: []
     }
 
   },
@@ -23,9 +61,9 @@ module.exports = {
       if (err) return next(err);
 
       if (posts.length == 0)
-        values.id = 1;
+        values.postid = 1;
       else
-        values.id = parseInt(posts[0].id)+ 1;
+        values.postid = parseInt(posts[0].postid)+ 1;
 
       next();
     });
