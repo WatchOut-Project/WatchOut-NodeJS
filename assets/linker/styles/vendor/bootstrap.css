@@ -4752,7 +4752,7 @@ a.thumbnail:focus {
   -moz-transition: opacity .3s linear, top .3s ease-out;
   -o-transition: opacity .3s linear, top .3s ease-out;
   transition: opacity .3s linear, top .3s ease-out;
-  top: -25%;
+  top: -15%;
 }
 .modal.fade.in {
   top: 10%;
