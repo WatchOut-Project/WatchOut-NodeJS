@@ -3,15 +3,15 @@
     <div class="modal-body">
         <button id="registerModalClose" type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="registerModalLabel">Register</h3>
-        <form id="registerModalForm" class="form-horizontal" action="/register" method="post">
+        <form id="registerModalForm" class="form-horizontal" action="/auth/register">
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalUsername" type="text" name="username" placeholder="Username">
+                    <input id="registerModalUsername" type="text" name="username" placeholder="Username" autocomplete="off">
                 </div>
             </div>
             <div class="registerModalControl control-group">
                 <div class="registerModalControl controls">
-                    <input id="registerModalEmail" type="text" name="email" placeholder="Email">
+                    <input id="registerModalEmail" type="text" name="email" placeholder="Email" autocomplete="off">
                 </div>
             </div>
             <div class="registerModalControl control-group">
@@ -29,6 +29,8 @@
                     <button id="registerModalRoundButton" type="submit" class="btn">Register</button>
                 </div>
             </div>
+            <a id="registerModalHaveAccount" href="#loginModal" data-toggle="modal">Already have account?</a>
+            <a id="registerModalForgotUsername" href="/auth/facebook">Forgot your Username?</a>
         </form>
 
         <a id="registerModalFacebook" href="/auth/facebook" class="btn btn-primary">Connect to Facebook</a>
