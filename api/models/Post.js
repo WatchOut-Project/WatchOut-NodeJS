@@ -18,7 +18,7 @@ module.exports = {
 
     message: {
       type: 'string',
-      minLength: 10;
+      minLength: 10
     },
 
     latitude: {
