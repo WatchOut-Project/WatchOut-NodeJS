@@ -10,12 +10,11 @@ var passport = require('passport');
 module.exports = {
 
   register: function (req, res) {
-    console.log("ok");
     if (req.body) {
       User.create({
-        username: req.param('username'),
-        email: req.param('email'),
-        password: req.param('password')
+        username: req.param('registerUsername'),
+        email: req.param('registerEmail'),
+        password: req.param('registerPassword')
       }).done(function(err, user) {
 
         // Error handling
@@ -24,7 +23,6 @@ module.exports = {
 
         // The User was created successfully!
         } else {
-          console.log("User created:", user.password);
           res.redirect('/');
           return;
         }
