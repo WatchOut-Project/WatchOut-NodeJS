@@ -44,17 +44,17 @@ module.exports.routes = {
     view: 'home/register'
   },
 
-  'post /login': {
+  'post /auth/login': {
     controller: 'auth',
     action: 'login'
   },
 
-  'post /register': {
+  'post /auth/register': {
     controller: 'auth',
     action: 'register'
   },
 
-  '/logout': {
+  '/auth/logout': {
     controller: 'auth',
     action: 'logout'
   },

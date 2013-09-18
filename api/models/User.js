@@ -46,7 +46,7 @@ module.exports = {
     },
 
     googleplusToken: {
-      btype: 'string'
+      type: 'string'
     },
 
     isAdmin: {
@@ -79,5 +79,6 @@ module.exports.hashPass = function(pass)
 
 module.exports.checkPass = function(pass, stored)
 {
+  console.log('pass : ' + pass + ', stored : ' + stored);
   return passwordHash.verify(pass, stored);
 }

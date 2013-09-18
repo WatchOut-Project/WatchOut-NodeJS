@@ -14,6 +14,4 @@ module.exports.bootstrap = function (cb) {
   // with the bootstrap!  (otherwise your server will never lift, since it's waiting on the bootstrap)
   cb();
 
-  sails.config.appName = "Watch Out";
-
 };
