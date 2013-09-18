@@ -46,7 +46,12 @@ module.exports = {
     },
 
     googleplusToken: {
-        type: 'string'
+      btype: 'string'
+    },
+
+    isAdmin: {
+      type: 'boolean',
+      defaultsTo: false
     },
 
     toJSON: function() {

@@ -30,8 +30,32 @@ module.exports = {
     }
   },
 
-  login: function (req, res) {
-    res.view();
+  login: function(req,res){
+    passport.authenticate(
+        'local',
+        function(err, user, info)
+        {
+            if ((err) || (!user))
+            {
+                res.redirect('/login');
+                return;
+            }
+            // use passport to log in the user using a local method
+            req.logIn(
+                user,
+                function(err)
+                {
+                    if (err)
+                    {
+                        res.redirect('/login');
+                        return;
+                    }
+                    res.redirect('/');
+                    return;
+                }
+            );
+        }
+    )(req, res);
   },
 
   logout: function (req, res) {

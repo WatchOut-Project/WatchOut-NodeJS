@@ -37,21 +37,22 @@ module.exports.routes = {
   },
 
   '/login': {
+    view: 'home/login'
+  },
+
+  '/register': {
+    view: 'home/register'
+  },
+
+  'post /login': {
     controller: 'auth',
     action: 'login'
   },
-
-  // 'post /signup': 'AuthController.register'
 
   'post /register': {
     controller: 'auth',
     action: 'register'
   },
-
-  // 'post /register': {
-  //   controller: 'auth',
-  //   action: 'register'
-  // },
 
   '/logout': {
     controller: 'auth',
