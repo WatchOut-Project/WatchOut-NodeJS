@@ -19,12 +19,12 @@
 }
 #registerModalClose:hover,
 #registerModalClose:focus {
-  color: #F6AD18;
+  color: #F9B400;
 }
 #registerModalLabel {
 	position: fixed;
 	font-size: 25px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
   	font-weight: bolder;
 	color: #898989;
@@ -45,7 +45,7 @@
 	margin-top: 40px;
 	width: 286px;
 	height: 35px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
 }
@@ -55,7 +55,7 @@
 	margin-top: 95px;
 	width: 286px;
 	height: 35px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
 }
@@ -65,7 +65,7 @@
 	margin-top: 150px;
 	width: 286px;
 	height: 35px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
 }
@@ -75,7 +75,7 @@
 	margin-top: 205px;
 	width: 286px;
 	height: 35px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 	background: #ffffff;
 }
@@ -99,7 +99,7 @@
     padding: 0;
     margin-top: 265px;
     margin-left: 230px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	background-color: #ffffff;
 	background: #ffffff;
 	color: #888888;
@@ -107,8 +107,8 @@
 }
 #registerModalRoundButton:hover,
 #registerModalRoundButton:focus {
-	background-color: #F6AD18;
-	background: #F6AD18;
+	background-color: #F9B400;
+	background: #F9B400;
 	border: 0;
 	color: #ffffff;
 	text-shadow: none;
@@ -117,7 +117,7 @@
 	position: fixed;
 	margin-top: 275px;
 	margin-left: 5px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 14px;
 	text-shadow: none;
 }
@@ -125,7 +125,7 @@
 	position: fixed;
 	margin-top: 305px;
 	margin-left: 5px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 14px;
 	text-shadow: none;
 }
@@ -141,7 +141,7 @@
 	border: 0;
 	text-align: center;
 	font-size: 16px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 }
 #registerModalGoogle {
@@ -157,6 +157,6 @@
 	border: 0;
 	text-align: center;
 	font-size: 16px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	text-shadow: none;
 }
