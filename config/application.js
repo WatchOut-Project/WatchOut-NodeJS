@@ -1,4 +1,5 @@
 var passport = require('passport');
+
 module.exports = {
 	
 	appName: "Watch Out",
