@@ -26,6 +26,34 @@ module.exports = {
 	// 	});
 	// }
 
+	// create: function (req,res) {
+
+	// 	User.find().limit(1).sort('createdAt DESC').done(function(err, users) {
+ //        	if (err) return next(err);
+
+ //        	var seqNo;
+ //        	if (users.length == 0)
+ //          		seqNo = 1;
+ //        	else
+ //          		seqNo = parseInt(users[0].id)+ 1;
+
+ //        	User.create({ 
+ //          		_id: seqNo, 
+ //          		username: req.param('username'),
+ //          		email: req.param('email'),
+ //          		password: req.param('password'),
+ //          		watchoutToken: req.param('watchoutToken'),
+ //          		facebookToken: req.param('facebookToken'),
+ //          		googleplusToken: req.param('googleplusToken'),
+ //          		isAdmin: req.param('isAdmin')
+ //        	}).done(function(err, user) {
+ //          		if(err) throw err;
+ //          		res.json(user);
+ //        	});
+
+ //      	});
+ //  	},
+
 	// create: function(req, res)
 	// {
 
