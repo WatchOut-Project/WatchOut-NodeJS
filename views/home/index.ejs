@@ -3,29 +3,8 @@
 <link rel="stylesheet" type="text/css" href="/linker/styles/watchout.css">
 <link rel="stylesheet" type="text/css" href="/linker/styles/nav.css">
 
-<div id="nav">
-    <div id="leftHeaderContent">
-    	<div class="dropdown">
-  			<a href="#" role="button" class="btn btn-warning btn-nav" data-toggle="dropdown">Menu</a>
-  			<ul id="dropDownMenu" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">All Categories</a></li>
-    			<li role="presentation" class="divider"></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #1</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #2</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #3</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #4</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #5</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #6</a></li>
-    			<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Category #7</a></li>
-  			</ul>
-		</div>
-    </div>
-    <a href="/" id="logo" data-force-refresh="1">WATCH OUT</a>
-    <div id="rightHeaderContent">
-        <a href="#loginModal" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Log In</a>
-        <a href="#registerModal" role="button" class="btn btn-warning btn-nav" data-toggle="modal">Register</a>
-    </div>
-</div>
+
+<% include ../home/nav %>
 
 <div id="map-canvas" onkeyup="shortCut(event)"></div>
 

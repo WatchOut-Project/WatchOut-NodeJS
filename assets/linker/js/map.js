@@ -30,7 +30,7 @@ function initialize() {
     myloc = new google.maps.Marker({
         clickable: false,
         shadow: null,
-        icon: "http://i.stack.imgur.com/orZ4x.png",
+        icon: '/images/current_location_marker_ic.png',
         map: map
     });
 
