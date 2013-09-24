@@ -1,18 +1,18 @@
 extends ../layout
 
 block body
-    script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true")
-    script(type="text/javascript" src="/linker/js/map.js")
-    link(rel="stylesheet" type="text/css" href="/linker/styles/watchout.css")
-    link(rel="stylesheet" type="text/css" href="/linker/styles/nav.css")
+	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true")
+	script(type="text/javascript" src="/linker/js/map.js")
+	link(rel="stylesheet" type="text/css" href="/linker/styles/watchout.css")
+	link(rel="stylesheet" type="text/css" href="/linker/styles/nav.css")
 
-    include nav
+	include nav
 
-    div(id="map-canvas" onkeyup="shortCut(event)")
+	div(id="map-canvas" onkeyup="shortCut(event)")
 
-    script(type="text/javascript" src="/linker/js/modal.js")
-    link(rel="stylesheet" type="text/css" href="/linker/styles/modals/login.css")
-    include ../modals/login
+	script(type="text/javascript" src="/linker/js/modal.js")
+	link(rel="stylesheet" type="text/css" href="/linker/styles/modals/login.css")
+	include ../modals/login
 
-    link(rel="stylesheet" type="text/css" href="/linker/styles/modals/register.css")
-    include ../modals/register
+	link(rel="stylesheet" type="text/css" href="/linker/styles/modals/register.css")
+	include ../modals/register
