@@ -1,0 +1,19 @@
+//Login Modal
+div#loginModal.modal.hide.fade(tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true")
+    div.modal-body
+        button#loginModalClose.close(type="button" data-dismiss="modal" aria-hidden="true") ×
+        h3#loginModalLabel Log in
+        form#loginModalForm.form-horizontal(action="/auth/login" method="post")
+            div.loginModalControl.control-group
+                div.loginModalControl.controls
+                    input#loginModalUsername(type="text" name="username" placeholder="Email or Username")
+            div.loginModalControl.control-group
+                div.loginModalControl.controls
+                    input#loginModalPassword(type="password" name="password" placeholder="Password")
+            div.loginModalControl.control-group
+                div.loginModalControl.controls
+                    button#loginModalRoundButton.btn(type="submit") Log in
+            a#loginModalForgotPassword(href="/auth/facebook") Forgot your password?
+            a#loginModalRegisterNow(href="#registerModal" data-toggle="modal") Register now
+        a#loginModalFacebook.btn.btn-primary(href="/auth/facebook") Connect to Facebook
+        a#loginModalGoogle.btn.btn-danger(href="/auth/google") Connect to Google+
