@@ -1,14 +1,15 @@
 extends ../layout
 
 block body
+	link(rel="stylesheet" type="text/css" href="/linker/styles/watchout.css")
+
+	link(rel="stylesheet" type="text/css" href="/linker/styles/nav.css")
+	include nav
+	
 	script(src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true")
 	script(type="text/javascript" src="/linker/js/map.js")
-	link(rel="stylesheet" type="text/css" href="/linker/styles/watchout.css")
-	link(rel="stylesheet" type="text/css" href="/linker/styles/nav.css")
-
-	include nav
-
-	div(id="map-canvas" onkeyup="shortCut(event)")
+	link(rel="stylesheet" type="text/css" href="/linker/styles/map.css")
+	include map
 
 	script(type="text/javascript" src="/linker/js/modal.js")
 	link(rel="stylesheet" type="text/css" href="/linker/styles/modals/login.css")

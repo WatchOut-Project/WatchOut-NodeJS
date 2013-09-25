@@ -96,7 +96,7 @@ html, body {
   width: 15px;
   height: 14px;
   padding-bottom: 2px;
-  background:url('/images/menu_bt.png');
+  background:url('/images/menu_ic.png');
   background-repeat: no-repeat;
 }
 .btn-navbar-watchout:hover .btn-navbar-watchout-menu ,
@@ -105,6 +105,6 @@ html, body {
 .btn-navbar-watchout.active .btn-navbar-watchout-menu ,
 .btn-navbar-watchout.disabled .btn-navbar-watchout-menu ,
 .btn-navbar-watchout[disabled] .btn-navbar-watchout-menu  {
-  background:url('/images/menu_bt_clicked.png');
+  background:url('/images/menu_ic_clicked.png');
   background-repeat: no-repeat;
 }
